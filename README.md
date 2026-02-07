@@ -1,1 +1,1 @@
-Real Estate Platform (REP)
+SSP stands for System Shogun Platform, a platform for paid content creation and distribution.
