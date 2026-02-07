@@ -1,6 +1,6 @@
-using REP.Domain.Listings;
+using SSP.Domain.Listings;
 
-namespace REP.Infrastructure.Persistence;
+namespace SSP.Infrastructure.Persistence;
 
 public static class ApplicationDbContextSeed
 {

@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using REP.Application.Interfaces;
-using REP.Domain.Listings;
+using SSP.Application.Interfaces;
+using SSP.Domain.Listings;
 
-namespace REP.Infrastructure.Persistence;
+namespace SSP.Infrastructure.Persistence;
 
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {

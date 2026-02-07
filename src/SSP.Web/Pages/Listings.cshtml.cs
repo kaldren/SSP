@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using REP.Application.Interfaces;
-using REP.Domain.Listings;
+using SSP.Application.Interfaces;
+using SSP.Domain.Listings;
 
-namespace REP.Web.Pages;
+namespace SSP.Web.Pages;
 
 public class ListingsModel : PageModel
 {

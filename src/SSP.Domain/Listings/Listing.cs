@@ -1,4 +1,4 @@
-﻿namespace REP.Domain.Listings;
+﻿namespace SSP.Domain.Listings;
 
 public class Listing
 {

@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using REP.Domain.Listings;
+using SSP.Domain.Listings;
 
-namespace REP.Infrastructure.Persistence.Configurations;
+namespace SSP.Infrastructure.Persistence.Configurations;
 
 public class ListingConfiguration : IEntityTypeConfiguration<Listing>
 {

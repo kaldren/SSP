@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using REP.Domain.Listings;
+using SSP.Domain.Listings;
 
-namespace REP.Application.Interfaces;
+namespace SSP.Application.Interfaces;
 
 public interface IApplicationDbContext
 {

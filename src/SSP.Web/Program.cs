@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
-using REP.Infrastructure;
-using REP.Infrastructure.Persistence;
+using SSP.Infrastructure;
+using SSP.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 

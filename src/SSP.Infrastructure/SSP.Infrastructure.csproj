@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\REP.Domain\REP.Domain.csproj" />
-    <ProjectReference Include="..\REP.Application\REP.Application.csproj" />
+    <ProjectReference Include="..\SSP.Application\SSP.Application.csproj" />
+    <ProjectReference Include="..\SSP.Domain\SSP.Domain.csproj" />
   </ItemGroup>
 
 </Project>

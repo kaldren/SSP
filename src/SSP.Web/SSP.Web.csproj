@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\REP.Infrastructure\REP.Infrastructure.csproj" />
-    <ProjectReference Include="..\REP.Application\REP.Application.csproj" />
+    <ProjectReference Include="..\SSP.Infrastructure\SSP.Infrastructure.csproj" />
+    <ProjectReference Include="..\SSP.Application\SSP.Application.csproj" />
   </ItemGroup>
 
 </Project>

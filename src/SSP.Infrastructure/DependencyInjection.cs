@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using REP.Application.Interfaces;
-using REP.Infrastructure.Persistence;
+using SSP.Application.Interfaces;
+using SSP.Infrastructure.Persistence;
 
-namespace REP.Infrastructure;
+namespace SSP.Infrastructure;
 
 public static class DependencyInjection
 {
@@ -15,7 +15,7 @@ public static class DependencyInjection
         if (useInMemory)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("REP"));
+                options.UseInMemoryDatabase("SSP"));
         }
         else
         {
