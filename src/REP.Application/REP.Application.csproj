@@ -10,4 +10,12 @@
     <Folder Include="Listings\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\REP.Domain\REP.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
+  </ItemGroup>
+
 </Project>
