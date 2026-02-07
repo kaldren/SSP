@@ -1,25 +1,26 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SSP.Application.Interfaces;
+using SSP.Domain.Content;
 using SSP.Domain.Listings;
 
 namespace SSP.Web.Pages;
 
-public class ListingsModel : PageModel
+public class CoursesModel : PageModel
 {
     private readonly IApplicationDbContext _context;
 
-    public ListingsModel(IApplicationDbContext context)
+    public CoursesModel(IApplicationDbContext context)
     {
         _context = context;
     }
 
-    public IReadOnlyList<Listing> Listings { get; private set; } = [];
+    public IReadOnlyList<Course> Courses { get; private set; } = [];
 
     public async Task OnGetAsync()
     {
-        Listings = await _context.Listings
-            .OrderByDescending(l => l.CreatedAt)
+        Courses = await _context.Courses
+            .OrderByDescending(c => c.CreatedAt)
             .ToListAsync();
     }
 }

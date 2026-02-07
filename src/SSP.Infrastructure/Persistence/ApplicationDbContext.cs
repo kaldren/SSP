@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SSP.Application.Interfaces;
-using SSP.Domain.Listings;
+using SSP.Domain.Content;
 
 namespace SSP.Infrastructure.Persistence;
 
@@ -11,7 +11,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
     }
 
-    public DbSet<Listing> Listings => Set<Listing>();
+    public DbSet<Course> Courses => Set<Course>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

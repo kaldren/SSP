@@ -4,7 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-REP.Web-b86187e2-60f3-4f26-8e32-520b597c72f4</UserSecretsId>
+    <UserSecretsId>aspnet-SSP.Web-b86187e2-60f3-4f26-8e32-520b597c72f4</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
