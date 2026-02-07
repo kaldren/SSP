@@ -3,6 +3,9 @@
     <File Path="README.md" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="src/REP.Application/REP.Application.csproj" Id="960c1300-7208-41fd-8d5a-72f7aa167e18" />
+    <Project Path="src/REP.Domain/REP.Domain.csproj" Id="37338d17-941b-44f8-89bd-620024f33777" />
+    <Project Path="src/REP.Infrastructure/REP.Infrastructure.csproj" Id="1aa0517b-54c6-48be-9d12-09e80bb9a7de" />
     <Project Path="src/REP.Web/REP.Web.csproj" />
   </Folder>
 </Solution>
