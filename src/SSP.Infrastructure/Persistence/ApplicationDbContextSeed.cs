@@ -15,7 +15,7 @@ public static class ApplicationDbContextSeed
         var introCourse = new Course
         {
             Id = Guid.NewGuid(),
-            Title = "Introduction to Programming",
+            Name = "Introduction to Programming",
             Description = "Learn the basics of programming using C#.",
             Difficulty = DifficultyLevel.Beginner,
             CreatedAt = now,
@@ -94,7 +94,7 @@ public static class ApplicationDbContextSeed
         var intermediateCourse = new Course
         {
             Id = Guid.NewGuid(),
-            Title = "C# Concepts",
+            Name = "C# Concepts",
             Description = "Deep dive into intermediate C# programming concepts.",
             Difficulty = DifficultyLevel.Intermediate,
             CreatedAt = now,
@@ -173,7 +173,7 @@ public static class ApplicationDbContextSeed
         var advancedCourse = new Course
         {
             Id = Guid.NewGuid(),
-            Title = "Advanced System Design",
+            Name = "Advanced System Design",
             Description = "Learn how to design scalable systems.",
             Difficulty = DifficultyLevel.Advanced,
             CreatedAt = now,

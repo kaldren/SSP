@@ -5,7 +5,7 @@ namespace SSP.Domain.Content;
 public class Course
 {
     public Guid Id { get; set; }
-    public string Title { get; set; }
+    public string Name { get; set; }
     public string Description { get; set; }
     public ICollection<Module> Modules { get; set; }
     public DifficultyLevel Difficulty { get; set; }
@@ -26,7 +26,7 @@ public class Course
         if (title.Length > 200)
             throw new ArgumentException("Title cannot exceed 200 characters.");
 
-        Title = title;
+        Name = title;
     }
 
     public void SetDescription(string description)

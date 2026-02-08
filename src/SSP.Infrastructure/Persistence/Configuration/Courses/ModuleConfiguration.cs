@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SSP.Domain.Courses;
 
-namespace SSP.Infrastructure.Persistence.Configurations;
+namespace SSP.Infrastructure.Persistence.Configuration.Courses;
 
 public class ModuleConfiguration : IEntityTypeConfiguration<Module>
 {

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SSP.Domain.Content;
 using SSP.Domain.Courses;
 
-namespace SSP.Infrastructure.Persistence.Configurations;
+namespace SSP.Infrastructure.Persistence.Configuration.Courses;
 
 public class CourseConfiguration : IEntityTypeConfiguration<Course>
 {
@@ -12,7 +12,7 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
     {
         builder.HasKey(c => c.Id);
 
-        builder.Property(c => c.Title)
+        builder.Property(c => c.Name)
             .IsRequired()
             .HasMaxLength(200);
 

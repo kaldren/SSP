@@ -39,7 +39,7 @@ public class LessonDetailModel : PageModel
         Lesson = lesson;
         Module = lesson.Module;
         CourseId = lesson.Module.CourseId;
-        CourseTitle = lesson.Module.Course.Title;
+        CourseTitle = lesson.Module.Course.Name;
 
         if (lesson.Type == LessonType.Text && lesson.Content is not null)
         {

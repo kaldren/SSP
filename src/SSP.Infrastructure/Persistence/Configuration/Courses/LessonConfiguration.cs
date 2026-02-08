@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SSP.Domain.Courses;
 
-namespace SSP.Infrastructure.Persistence.Configurations;
+namespace SSP.Infrastructure.Persistence.Configuration.Courses;
 
 public class LessonConfiguration : IEntityTypeConfiguration<Lesson>
 {
