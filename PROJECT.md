@@ -11,3 +11,8 @@ The System Shogun Platform (SSP) is built on a monolithic architecture, which me
 
 That's it. Initially I will be the only content creator on the platform, but in the future, I may consider allowing other creators to join and contribute their content as well.
 Initially the system will be simple and only contain the necessary features to allow me to upload and manage my content, as well as allow users to subscribe and access that content. As the platform grows, I may consider adding additional features such as analytics, community features, or support for multiple content creators.
+
+# Domain Model
+The domain model for SSP includes the following entities:
+- **Course**: Represents a collection of content that users can subscribe to. Each course has a title, description, and a list of content items.
+- **CourseItem**: Represents an individual piece of content within a course. Each course item has a title, description, and a link to the actual content (e.g., video URL).

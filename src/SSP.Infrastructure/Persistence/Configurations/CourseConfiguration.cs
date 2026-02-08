@@ -3,11 +3,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SSP.Domain.Content;
 using SSP.Domain.Courses;
-using SSP.Domain.Listings;
 
 namespace SSP.Infrastructure.Persistence.Configurations;
 
-public class CoursesConfiguration : IEntityTypeConfiguration<Course>
+public class CourseConfiguration : IEntityTypeConfiguration<Course>
 {
     public void Configure(EntityTypeBuilder<Course> builder)
     {

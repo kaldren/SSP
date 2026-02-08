@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SSP.Application.Interfaces;
 using SSP.Domain.Content;
-using SSP.Domain.Listings;
 
 namespace SSP.Web.Pages;
 

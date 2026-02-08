@@ -7,12 +7,14 @@ public class Course
     public Guid Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
+    public ICollection<Module> Modules { get; set; }
     public DifficultyLevel Difficulty { get; set; }
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset? UpdatedAt { get; set; }
 
     public Course()
     {
+        Modules = new HashSet<Module>();
         CreatedAt = DateTimeOffset.UtcNow;
     }
 

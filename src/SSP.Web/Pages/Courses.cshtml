@@ -27,7 +27,7 @@ else
                 @foreach (var course in Model.Courses)
                 {
                     <tr>
-                        <td>@course.Title</td>
+                        <td><a asp-page="/CourseDetail" asp-route-id="@course.Id">@course.Title</a></td>
                         <td>@course.Description</td>
                         <td>@course.Difficulty</td>
                         <td>@course.CreatedAt.ToString("yyyy-MM-dd")</td>
