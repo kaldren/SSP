@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SSP.Domain.Courses;
 
 namespace SSP.Infrastructure.Persistence.Configurations;
@@ -19,10 +20,19 @@ public class LessonConfiguration : IEntityTypeConfiguration<Lesson>
             .IsRequired()
             .HasMaxLength(200);
 
-        builder.Property(l => l.Content)
-            .IsRequired();
+        var lessonTypeConverter = new ValueConverter<LessonType, string>(
+            v => v.Name,
+            v => v == "Video" ? LessonType.Video : LessonType.Text);
 
-        builder.Property(l => l.Url)
+        builder.Property(l => l.Type)
+            .IsRequired()
+            .HasConversion(lessonTypeConverter);
+
+        builder.Property(l => l.Content)
+            .IsRequired(false);
+
+        builder.Property(l => l.VideoUrl)
+            .IsRequired(false)
             .HasMaxLength(500);
 
         builder.Property(l => l.Order)

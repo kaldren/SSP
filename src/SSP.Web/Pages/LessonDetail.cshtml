@@ -1,0 +1,38 @@
+@page "{id:guid}"
+@using SSP.Domain.Courses
+@using SSP.Web.Pages
+@model LessonDetailModel
+@{
+    ViewData["Title"] = Model.Lesson.Title;
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Courses">Courses</a></li>
+        <li class="breadcrumb-item"><a asp-page="/CourseDetail" asp-route-id="@Model.CourseId">@Model.CourseTitle</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@Model.Lesson.Title</li>
+    </ol>
+</nav>
+
+<h1>@Model.Lesson.Title</h1>
+<p class="text-muted mb-4">
+    <span class="badge bg-secondary">@Model.Module.Title</span>
+    <span class="badge bg-light text-dark">@Model.Lesson.Type</span>
+</p>
+
+@if (Model.Lesson.Type == LessonType.Video && Model.YouTubeEmbedUrl is not null)
+{
+    <div class="ratio ratio-16x9 mb-4">
+        <iframe src="@Model.YouTubeEmbedUrl"
+                title="@Model.Lesson.Title"
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+}
+else if (Model.Lesson.Type == LessonType.Text)
+{
+    <article class="lesson-content">
+        @Html.Raw(Model.RenderedContent)
+    </article>
+}

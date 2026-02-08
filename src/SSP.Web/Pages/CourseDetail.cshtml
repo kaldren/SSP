@@ -1,4 +1,5 @@
 @page "{id:guid}"
+@using SSP.Domain.Courses
 @using SSP.Web.Pages
 @model CourseDetailModel
 @{
@@ -52,10 +53,14 @@ else
                             <ul class="list-group list-group-flush">
                                 @foreach (var lesson in module.Lessons)
                                 {
-                                    <li class="list-group-item">
-                                        <strong>@lesson.Order. @lesson.Title</strong>
-                                        <p class="mb-0 text-muted small">@lesson.Content</p>
-                                    </li>
+                                    var icon = lesson.Type == LessonType.Video ? "&#9654;" : "&#128196;";
+                                    <a asp-page="/LessonDetail" asp-route-id="@lesson.Id"
+                                       class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <span>
+                                            <strong>@lesson.Order. @lesson.Title</strong>
+                                        </span>
+                                        <span class="badge bg-light text-dark">@Html.Raw(icon) @lesson.Type</span>
+                                    </a>
                                 }
                             </ul>
                         }
