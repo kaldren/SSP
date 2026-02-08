@@ -1,31 +1,356 @@
+/* ?? Base ??????????????????????????????????????????????????? */
+
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: var(--ssp-bg);
+    color: var(--ssp-text);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* ?? Links ?????????????????????????????????????????????????? */
+
+a {
+    color: var(--ssp-primary);
+    transition: color var(--ssp-transition);
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+a:hover {
+    color: var(--ssp-primary-hover);
+}
+
+/* ?? Focus rings ???????????????????????????????????????????? */
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem var(--ssp-white), 0 0 0 0.25rem rgba(var(--ssp-primary-rgb), 0.45);
+}
+
+/* ?? Floating labels ???????????????????????????????????????? */
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* ?? Navbar ????????????????????????????????????????????????? */
+
+.navbar {
+    background-color: var(--ssp-primary) !important;
+    box-shadow: var(--ssp-shadow);
+    border-bottom: none !important;
+}
+
+.navbar .navbar-brand {
+    color: var(--ssp-text-on-primary) !important;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    transition: color var(--ssp-transition);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--ssp-white) !important;
+}
+
+.navbar .navbar-text {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* ?? Buttons ???????????????????????????????????????????????? */
+
+.btn-primary {
+    background-color: var(--ssp-primary);
+    border-color: var(--ssp-primary);
+    color: var(--ssp-text-on-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--ssp-primary-hover);
+    border-color: var(--ssp-primary-hover);
+}
+
+.btn-outline-primary {
+    color: var(--ssp-primary);
+    border-color: var(--ssp-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--ssp-primary);
+    color: var(--ssp-text-on-primary);
+}
+
+/* ?? Cards & Surfaces ??????????????????????????????????????? */
+
+.card {
+    background-color: var(--ssp-surface);
+    border: 1px solid var(--ssp-border);
+    border-radius: var(--ssp-radius);
+    box-shadow: var(--ssp-shadow-sm);
+}
+
+/* ?? Tables ????????????????????????????????????????????????? */
+
+.table {
+    --bs-table-bg: var(--ssp-surface);
+    border-radius: var(--ssp-radius);
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: var(--ssp-primary);
+    color: var(--ssp-text-on-primary);
+    border-bottom: none;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+}
+
+.table tbody tr {
+    transition: background-color var(--ssp-transition);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--ssp-primary-light) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    --bs-table-striped-bg: rgba(var(--ssp-primary-rgb), 0.04);
+}
+
+/* ?? Badges ????????????????????????????????????????????????? */
+
+.badge.bg-secondary {
+    background-color: var(--ssp-primary) !important;
+    color: var(--ssp-text-on-primary);
+}
+
+.badge.bg-light {
+    background-color: var(--ssp-primary-light) !important;
+    color: var(--ssp-primary) !important;
+    border: 1px solid var(--ssp-primary-subtle);
+}
+
+/* ?? Breadcrumbs ???????????????????????????????????????????? */
+
+.breadcrumb {
+    background-color: var(--ssp-primary-light);
+    padding: 0.75rem 1rem;
+    border-radius: var(--ssp-radius-sm);
+}
+
+.breadcrumb-item a {
+    color: var(--ssp-primary);
+}
+
+.breadcrumb-item.active {
+    color: var(--ssp-text-secondary);
+}
+
+/* ?? Accordion ?????????????????????????????????????????????? */
+
+.accordion-item {
+    border-color: var(--ssp-border);
+    margin-bottom: 0.5rem;
+    border-radius: var(--ssp-radius) !important;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-weight: 500;
+    background-color: var(--ssp-surface);
+    color: var(--ssp-text);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--ssp-primary-light);
+    color: var(--ssp-primary);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(var(--ssp-primary-rgb), 0.25);
+    border-color: var(--ssp-primary-subtle);
+}
+
+.accordion-button::after {
+    filter: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: hue-rotate(90deg) brightness(0.6);
+}
+
+/* ?? List group (lesson items) ?????????????????????????????? */
+
+.list-group-item-action {
+    border-left: 3px solid transparent;
+    transition: all var(--ssp-transition);
+}
+
+.list-group-item-action:hover,
+.list-group-item-action:focus {
+    background-color: var(--ssp-primary-light);
+    border-left-color: var(--ssp-primary);
+    color: var(--ssp-text);
+}
+
+/* ?? Lesson content (rendered markdown) ????????????????????? */
+
+.lesson-content {
+    background-color: var(--ssp-surface);
+    border: 1px solid var(--ssp-border);
+    border-radius: var(--ssp-radius);
+    padding: 2rem;
+    box-shadow: var(--ssp-shadow-sm);
+    line-height: 1.7;
+}
+
+.lesson-content h2 {
+    color: var(--ssp-primary);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--ssp-primary-subtle);
+    margin-bottom: 1rem;
+}
+
+.lesson-content h3 {
+    color: var(--ssp-text);
+    margin-top: 1.5rem;
+}
+
+.lesson-content code {
+    background-color: var(--ssp-primary-light);
+    color: var(--ssp-primary-hover);
+    padding: 0.15em 0.4em;
+    border-radius: var(--ssp-radius-sm);
+    font-size: 0.875em;
+}
+
+.lesson-content pre {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 1.25rem;
+    border-radius: var(--ssp-radius);
+    overflow-x: auto;
+}
+
+.lesson-content pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+.lesson-content blockquote {
+    border-left: 4px solid var(--ssp-primary);
+    background-color: var(--ssp-primary-light);
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    border-radius: 0 var(--ssp-radius-sm) var(--ssp-radius-sm) 0;
+}
+
+.lesson-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.lesson-content th {
+    background-color: var(--ssp-primary);
+    color: var(--ssp-text-on-primary);
+    padding: 0.5rem 0.75rem;
+}
+
+.lesson-content td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--ssp-border);
+}
+
+.lesson-content tr:nth-child(even) td {
+    background-color: var(--ssp-primary-light);
+}
+
+/* ?? Video embed ???????????????????????????????????????????? */
+
+.ratio {
+    border-radius: var(--ssp-radius);
+    overflow: hidden;
+    box-shadow: var(--ssp-shadow);
+}
+
+/* ?? Footer ????????????????????????????????????????????????? */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: var(--ssp-primary);
+    color: rgba(255, 255, 255, 0.8);
+    border-top: none !important;
+}
+
+.footer a {
+    color: var(--ssp-text-on-primary);
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: var(--ssp-primary-light);
+}
+
+/* ?? Nav pills ?????????????????????????????????????????????? */
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: var(--ssp-primary);
+    border-color: var(--ssp-primary);
+    color: var(--ssp-text-on-primary);
+}
+
+/* ?? Scrollbar (Webkit) ????????????????????????????????????? */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--ssp-primary-subtle);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ssp-primary);
 }

@@ -2,10 +2,13 @@
 @using SSP.Web.Pages
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center py-5">
+    <h1 class="display-4 fw-bold" style="color: var(--ssp-primary);">&#9876; System Shogun</h1>
+    <p class="lead text-secondary mt-3 mb-4">Master your skills. Level up your career.</p>
+    <a asp-page="/Courses" class="btn btn-primary btn-lg px-4">
+        Browse Courses
+    </a>
 </div>
