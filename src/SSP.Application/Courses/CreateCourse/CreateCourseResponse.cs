@@ -1,5 +1,3 @@
 ﻿namespace SSP.Application.Courses.CreateCourse;
 
-internal class CreateCourseResponse
-{
-}
+public record CreateCourseResponse(Guid Id);

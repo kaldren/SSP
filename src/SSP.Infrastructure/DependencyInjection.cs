@@ -2,7 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SSP.Application.Interfaces;
+using SSP.Domain.Courses;
 using SSP.Infrastructure.Persistence;
+using SSP.Infrastructure.Persistence.Repositories;
 
 namespace SSP.Infrastructure;
 
@@ -28,6 +30,8 @@ public static class DependencyInjection
 
         services.AddScoped<IApplicationDbContext>(provider =>
             provider.GetRequiredService<ApplicationDbContext>());
+
+        services.AddScoped<ICourseRepository, CourseRepository>();
 
         return services;
     }
