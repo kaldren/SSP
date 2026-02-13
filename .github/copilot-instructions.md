@@ -37,6 +37,33 @@ SSP/
 - **SSP.Infrastructure**: Depends on SSP.Application and SSP.Domain
 - **SSP.Web**: Depends on SSP.Infrastructure and SSP.Application
 
+### Vertical Slices Architecture
+
+The project uses **Vertical Slices Architecture** (also known as feature-based organization) within the Application layer. Instead of organizing code by technical layers (Controllers, Services, Models), each feature is self-contained in its own folder with all related components.
+
+**Key principles**:
+- **Feature-based organization**: Code is grouped by business feature (e.g., `Courses/CreateCourse/`) rather than technical role
+- **Minimal coupling**: Each slice is independent and minimizes coupling between features
+- **Complete ownership**: A vertical slice contains everything needed for that feature (request, response, command, handler)
+- **Easy to change**: Changes to a feature are isolated to that feature's folder
+
+**Structure example**:
+```
+SSP.Application/
+└── Courses/
+    ├── CreateCourse/
+    │   ├── CreateCourseCommand.cs
+    │   ├── CreateCourseRequest.cs
+    │   ├── CreateCourseResponse.cs
+    │   └── CreateCourseCommandHandler.cs (all logic for this feature)
+    ├── UpdateCourse/
+    │   └── ... (complete feature slice)
+    └── GetCourse/
+        └── ... (complete feature slice)
+```
+
+This approach makes it easier to understand, modify, and test features independently. Read more about Vertical Slice Architecture at [Jimmy Bogard's blog](https://www.jimmybogard.com/vertical-slice-architecture/).
+
 ## Domain Model
 
 The core domain revolves around courses and learning content:
